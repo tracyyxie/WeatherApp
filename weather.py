@@ -14,16 +14,12 @@ def find_weather(apiKey, city):
 # get user input and display information
 
 def display():
-    # NEW
     left,mid,right = st.columns([1,6,1])
     with mid:
         st.image("images/icons.jpg")
     st.header("Find Your Current Weather!")
-    # NEW
     city = st.text_input("Your city:").lower()
-    # NEW
     units = st.selectbox("Select units:",["Celsius", "Fahrenheit"])
-    # NEW
     if st.button("Search"):
         try:
             weatherData = find_weather(apiKey, city)
